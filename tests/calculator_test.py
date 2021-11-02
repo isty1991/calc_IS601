@@ -37,6 +37,10 @@ def test_calculator_divide():
     #Arrange by instantiating the calc class
     calc = Calculator()
     #Act by calling the method to be tested
-    result = calc.divide_numbers(0)
+try:
+    result = calc.divide_numbers(1,0)
     #Assert that the results are correct
-    assert result == error
+    assert result !=0
+
+except:
+    print("An error occurred")
