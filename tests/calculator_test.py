@@ -25,8 +25,18 @@ def test_calculator_subtract():
     calc = Calculator()
     calc.subtract_number(1)
     assert calc.get_result() == -1
+
 def test_calculator_multiply():
     """ tests multiplication of two numbers"""
     calc = Calculator()
     result  = calc.multiply_numbers(1,2)
     assert result == 2
+
+def test_calculator_divide():
+    """ tests multiplication of two numbers"""
+    #Arrange by instantiating the calc class
+    calc = Calculator()
+    #Act by calling the method to be tested
+    result = calc.divide_numbers(0)
+    #Assert that the results are correct
+    assert result == error
