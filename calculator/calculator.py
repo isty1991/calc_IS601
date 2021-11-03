@@ -8,6 +8,10 @@ class Calculator:
     #this is the calculator static property
     history = []
     @staticmethod
+    def get_history():
+        return Calculator.history
+
+    @staticmethod
     def get_result_of_first_calculation_added_to_history():
         return Calculator.history[0].getResult()
     @staticmethod
@@ -23,7 +27,7 @@ class Calculator:
         return True
     @staticmethod
     def get_result_of_last_calculation_added_to_history():
-        # -1 gets the last item added to the list automaticly and you can expect it to have the get result method
+        # -1 gets the last item added to the list automatically and you can expect it to have the get result method
         return Calculator.history[-1].getResult()
     @staticmethod
     def add_number(value_a, value_b):
