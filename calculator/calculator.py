@@ -9,26 +9,32 @@ class Calculator:
     history = []
     @staticmethod
     def get_history():
+    #this returns the contents of the history list
         return Calculator.history
 
     @staticmethod
     def get_result_of_first_calculation_added_to_history():
         return Calculator.history[0].getResult()
+
     @staticmethod
     def clear_history():
         Calculator.history.clear()
         return True
+
     @staticmethod
     def history_count():
         return len(Calculator.history)
+
     @staticmethod
     def add_calculation_to_history(calculation):
         Calculator.history.append(calculation)
         return True
+
     @staticmethod
     def get_result_of_last_calculation_added_to_history():
         # -1 gets the last item added to the list automatically and you can expect it to have the get result method
         return Calculator.history[-1].getResult()
+
     @staticmethod
     def add_number(value_a, value_b):
         """ adds number to result"""
@@ -37,6 +43,7 @@ class Calculator:
         # addition = Addition(value_a,value_b) <-this is not good but will work.  It will be repeated too much
         Calculator.add_calculation_to_history(addition)
         return Calculator.get_result_of_last_calculation_added_to_history()
+
     @staticmethod
     #this is an example of a calling method
     def subtract_number(value_a, value_b):
@@ -46,6 +53,7 @@ class Calculator:
         # addition = Addition(value_a,value_b) <-this is not good but will work.  It will be repeated too much
         Calculator.add_calculation_to_history(subtraction)
         return Calculator.get_result_of_last_calculation_added_to_history()
+
     @staticmethod
     def multiply_numbers(value_a, value_b):
         """ multiply two numbers and store the result"""
