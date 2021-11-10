@@ -4,7 +4,7 @@ from calc.addition import Addition
 from calc.subtraction import Subtraction
 from calc.multiplication import Multiplication
 class Calculator:
-    """ This is the Calculator class"""
+    """This is the Calculator class"""
     #this is the calculator static property
     history = []
     @staticmethod
@@ -13,10 +13,12 @@ class Calculator:
         return Calculator.history
 
     @staticmethod
+    #Get first calculation
     def get_result_of_first_calculation_added_to_history():
         return Calculator.history[0].getResult()
 
     @staticmethod
+    # Clearing History
     def clear_history():
         Calculator.history.clear()
         return True
@@ -26,6 +28,7 @@ class Calculator:
         return len(Calculator.history)
 
     @staticmethod
+    #Calculation History
     def add_calculation_to_history(calculation):
         Calculator.history.append(calculation)
         return True
