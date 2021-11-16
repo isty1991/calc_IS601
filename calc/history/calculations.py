@@ -21,7 +21,7 @@ class Calculations:
         return Calculations.history[-1]
     @staticmethod
     def get_last_calculation_result_value():
-        """get last calculation convenience method"""
+        """get last calculation"""
         calculation = Calculations.get_last_calculation_object()
         return calculation.get_result()
     @staticmethod
@@ -41,14 +41,14 @@ class Calculations:
         """create an addition and add object to history using factory method create"""
         Calculations.add_calculation(Addition.create(values))
         #Get the result of the calculation
-        return Calculations.get_last_calculation_object()
+        return True
     @staticmethod
     def add_subtraction_calculation(values):
         """create a subtraction object to history using factory method create"""
         Calculations.add_calculation(Subtraction.create(values))
-        return Calculations.get_last_calculation_object()
+        return True
     @staticmethod
     def add_multiplication_calculation(values):
         """Add a multiplication object to history using factory method create"""
         Calculations.add_calculation(Multiplication.create(values))
-        return Calculations.get_last_calculation_object()
+        return True
