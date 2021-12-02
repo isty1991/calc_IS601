@@ -56,3 +56,16 @@ def test_calculator_subtract(clear_history):
 def test_calculator_multiply(clear_history):
     """ tests multiplication of two numbers"""
     assert Calculator.multiply_numbers(1, 2) == 2
+
+
+def test_calculator_division(clear_history):
+    """ tests multiplication of two numbers"""
+    assert Calculator.divide_numbers(1, 2) == 0.5
+
+
+def test_calculator_divide(clear_history):
+    """ tests division by 0"""
+    try:
+        assert Calculator.divide_numbers(1, 0) != 0
+    except:
+        print("An error occurred")
