@@ -3,7 +3,7 @@
 
 class Calculation:
 
-    # contstructor and it is the first function called when an object of the class is instantiated
+    # constructor and it is the first function called when an object of the class is instantiated
     def __init__(self, value_a, value_b):
         # self references the instantiated object of the class
         # these are instance properties that are being shared with the child classes (addition, subtraction, etc...)

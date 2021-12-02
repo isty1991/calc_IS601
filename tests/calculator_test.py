@@ -17,7 +17,7 @@ def test_calculator_add(clear_history):
     assert Calculator.add_number(3, 2) == 5
     assert Calculator.add_number(4, 2) == 6
     assert Calculator.history_count() == 4
-    assert Calculator.get_result_of_last_calculation() == 6
+    assert Calculator.get_last_calculation() == 6
 
 
 def test_clear_history(clear_history):
@@ -40,13 +40,13 @@ def test_count_history(clear_history):
 def test_get_last_calculation_result(clear_history):
     assert Calculator.add_number(2, 2) == 4
     assert Calculator.add_number(3, 2) == 5
-    assert Calculator.get_result_of_last_calculation() == 5
+    assert Calculator.get_last_calculation() == 5
 
 
 def test_get_first_calculation_result(clear_history):
     assert Calculator.add_number(2, 2) == 4
     assert Calculator.add_number(3, 2) == 5
-    assert Calculator.get_result_of_first_calculation() == 4
+    assert Calculator.get_first_calculation() == 4
 
 
 def test_calculator_subtract(clear_history):

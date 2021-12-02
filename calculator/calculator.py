@@ -1,8 +1,8 @@
 """ This is the increment function"""
 # first import the addition namespace
-from calc.addition import Addition
-from calc.subtraction import Subtraction
-from calc.multiplication import Multiplication
+from calc.calculations.addition import Addition
+from calc.calculations.subtraction import Subtraction
+from calc.calculations.multiplication import Multiplication
 
 
 class Calculator:
@@ -16,7 +16,7 @@ class Calculator:
         return Calculator.history
 
     @staticmethod
-    def get_result_of_first_calculation():
+    def get_first_calculation():
         return Calculator.history[0].getResult()
 
     @staticmethod
@@ -34,7 +34,7 @@ class Calculator:
         return True
 
     @staticmethod
-    def get_result_of_last_calculation():
+    def get_last_calculation():
         # -1 gets the last item added to the list automatically and you can expect it to have the get result method
         return Calculator.history[-1].getResult()
 
@@ -45,7 +45,7 @@ class Calculator:
         addition = Addition.create(value_a, value_b)
         # addition = Addition(value_a,value_b) <-this is not good but will work.  It will be repeated too much
         Calculator.add_calculation_to_history(addition)
-        return Calculator.get_result_of_last_calculation()
+        return Calculator.get_last_calculation()
 
     @staticmethod
     # this is an example of a calling method
@@ -55,11 +55,11 @@ class Calculator:
         subtraction = Subtraction.create(value_a, value_b)
         # addition = Addition(value_a,value_b) <-this is not good but will work.  It will be repeated too much
         Calculator.add_calculation_to_history(subtraction)
-        return Calculator.get_result_of_last_calculation()
+        return Calculator.get_last_calculation()
 
     @staticmethod
     def multiply_numbers(value_a, value_b):
         """ multiply two numbers and store the result"""
         # this is a shorthand way to create the multiplication object and added it the history in one line
         Calculator.add_calculation_to_history(Multiplication.create(value_a, value_b))
-        return Calculator.get_result_of_last_calculation()
+        return Calculator.get_last_calculation()
