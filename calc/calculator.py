@@ -32,8 +32,3 @@ class Calculator:
         Calculations.add_multiplication_calculation(tuple_values)
         return True
 
-    @staticmethod
-    def divide_numbers(tuple_values: tuple):
-        """ divide two numbers and store the result """
-        Calculations.add_division_calculation(tuple_values)
-        return True

@@ -42,8 +42,3 @@ def test_calculator_multiply_static(clear_history_fixture, test_tuple):
     Calculator.multiply_numbers(test_tuple)
     assert Calculator.get_result_value() == 10.0
 
-
-def test_calculator_divide(clear_history_fixture, test_tuple):
-    Calculator.divide_numbers(test_tuple)
-    assert Calculator.get_result_value() != 0
-    print("An error occurred")
