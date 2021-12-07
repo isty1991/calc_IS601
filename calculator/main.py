@@ -27,5 +27,5 @@ class Calculator:
 
     def divide_numbers(self, value_a, value_b):
         """ divide two numbers and store the result """
-        self_result = value_a / value_b
+        self.result = value_a / value_b
         return self.result
