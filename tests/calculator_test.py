@@ -1,8 +1,8 @@
 """Testing the Calculator"""
 import pytest
 
-from calculator import Calculator
-
+from calc.calculator import Calculator
+from calc.csv import read
 
 @pytest.fixture
 def clear_history():
@@ -67,9 +67,10 @@ def test_calculator_divide(clear_history):
     """ tests division by 0"""
     try:
         assert Calculator.divide_numbers(1, 0) != 0
-    except:
         print("An error occurred")
+    except:
+        print("Running")
 
 
-def test_read_csv():
+def test_read_csv(df):
     assert Calculator.read_csv() == True

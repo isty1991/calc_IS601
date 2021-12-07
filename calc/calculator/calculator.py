@@ -1,9 +1,9 @@
 """ This is the increment function"""
-from calc.calculations.addition import Addition
-from calc.calculations.subtraction import Subtraction
-from calc.calculations.multiplication import Multiplication
+from calc.calculator import Addition
+from calc.calculator import Subtraction
+from calc.calculator import Multiplication
+from calc.calculator import Division
 
-from calc.calculations.division import Division
 
 
 class Calculator:
@@ -67,7 +67,8 @@ class Calculator:
 
     @staticmethod
     def divide_numbers(value_a, value_b):
-        """ multiply two numbers and store the result"""
+        """ divide two numbers and store the result"""
         # this is a shorthand way to create the multiplication object and added it the history in one line
         Calculator.add_calculation_to_history(Division.create(value_a, value_b))
         return Calculator.get_last_calculation()
+
