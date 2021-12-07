@@ -72,4 +72,4 @@ def test_calculator_divide(clear_history):
 
 
 def test_read_csv():
-    assert Calculator.read_csv == True
+    assert Calculator.read_csv() == True

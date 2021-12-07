@@ -1,9 +1,8 @@
+# Load pandas
 import pandas as pd
 
+# Read CSV file into DataFrame df
+df = pd.read_csv('done/tests.csv')
 
-def read_csv():
-    with open("done/tests.csv", mode='r') as csv_file:
-        df = pd.csv_read(csv_file)
-        line_count = 0
-        for row in df:
-            print(', '.join(row))
+# Show dataframe
+print(df)
