@@ -1,8 +1,8 @@
 """ This is the increment function"""
-from calc.calculator import Addition
-from calc.calculator import Subtraction
-from calc.calculator import Multiplication
-from calc.calculator import Division
+from calculator import Addition
+from calculator import Subtraction
+from calculator import Multiplication
+from calculator import Division
 
 
 

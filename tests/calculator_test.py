@@ -1,8 +1,8 @@
 """Testing the Calculator"""
 import pytest
 
-from calc.calculator import Calculator
-from calc.csv import read
+from calculator import Calculator
+
 
 @pytest.fixture
 def clear_history():
