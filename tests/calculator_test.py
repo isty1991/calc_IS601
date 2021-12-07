@@ -69,3 +69,7 @@ def test_calculator_divide(clear_history):
         assert Calculator.divide_numbers(1, 0) != 0
     except:
         print("An error occurred")
+
+
+def test_read_csv():
+    assert Calculator.read_csv == True
