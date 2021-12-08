@@ -1,9 +1,8 @@
 """ This is the increment function"""
-from calculator import Addition
-from calculator import Subtraction
-from calculator import Multiplication
-from calculator import Division
-
+from calc.calculator.calculator import Addition
+from calc.calculator.calculator import Subtraction
+from calc.calculator.calculator import Multiplication
+from calc.calculator.calculator import Division
 
 
 class Calculator:
@@ -71,4 +70,3 @@ class Calculator:
         # this is a shorthand way to create the multiplication object and added it the history in one line
         Calculator.add_calculation_to_history(Division.create(value_a, value_b))
         return Calculator.get_last_calculation()
-
