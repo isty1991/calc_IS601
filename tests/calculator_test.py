@@ -1,8 +1,9 @@
 """Testing the Calculator"""
+import pprint
+
 import pytest
 
-from calculator import Calculator
-
+from calculator.calculator import Calculator
 
 @pytest.fixture
 def clear_history():
@@ -71,6 +72,3 @@ def test_calculator_divide(clear_history):
     except:
         print("Running")
 
-
-def test_read_csv(df):
-    assert Calculator.read_csv() == True
